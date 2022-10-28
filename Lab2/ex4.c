@@ -14,10 +14,10 @@ int main(){
     int index = 0;
 
     for(i = 0; i < S1; i++){
-        int r1 = rand() % 10;
+        int r1 = rand() % 3 +1;
         v1[i] = r1;
         if(i < S2){
-            int r2 = rand() % 10;
+            int r2 = rand() % 3 + 1;
             v2[i] = r2;
         }
     }
@@ -34,8 +34,9 @@ int main(){
         }
         //printf("%d , %d \n", sum1, sumTmp);
         if(sumTmp == sum1){
-            //printf("here \n");
+
             //possibile match
+            matches = 1;
             for(j = 0; j < S2 && matches == 1; j++){
                 int count = 0, mult = 0;
                 for(x = 0; x < S2; x++){
@@ -77,7 +78,8 @@ int main(){
 
     printf("\n");
 
-    printf("%d at : %d\n", found, index);
+    if(found!= 0) printf("%d at : %d\n", found, index);
+    else printf("no match \n" );
 
     return 0;
 }

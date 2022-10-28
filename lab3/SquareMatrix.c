@@ -15,11 +15,14 @@ int main(){
     int found = 1;
     int found2 = 0;
     int indA = 0, indB = 0;
+
+
     for(i = 0; i < H; i++){
         for(j = 0; j < L; j++){
             m[i][j] = rand() %3 +1;
         }
     }
+
 
     for( k = 2;(k <= H && k <= L) && impossibile == 1; k++){
         found2 = 0;
